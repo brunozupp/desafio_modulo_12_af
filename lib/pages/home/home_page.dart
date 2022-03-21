@@ -1,4 +1,5 @@
 import 'package:desafio_modulo_12_af/pages/home/widgets/app_bar_widget.dart';
+import 'package:desafio_modulo_12_af/pages/home/widgets/feed/feed_widget.dart';
 import 'package:desafio_modulo_12_af/pages/home/widgets/story/story_widget.dart';
 import 'package:desafio_modulo_12_af/shared/constantes/constantes_imagens.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             StoryWidget(),
+
+            FeedWidget(),
           ],
         ),
       ),
