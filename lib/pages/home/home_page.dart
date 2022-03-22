@@ -1,4 +1,5 @@
 import 'package:desafio_modulo_12_af/pages/feed/feed_page.dart';
+import 'package:desafio_modulo_12_af/shared/constantes/constantes_imagens.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,9 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  final controller = PageController(
-    initialPage: 0
-  );
+  var currentPage = 0;
 
   final pages = [
     const FeedPage(),
@@ -33,12 +32,58 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        controller: controller,
-        itemCount: pages.length,
-        itemBuilder: (context,index) {
-          return pages[index];
-        }
+      body: IndexedStack(
+        index: currentPage,
+        children: pages,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        currentIndex: currentPage,
+        onTap: (page) {
+          setState(() {
+            currentPage = page;
+          });
+        },
+        showSelectedLabels: false,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        iconSize: 30,
+        items: const [
+          BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(
+              Icons.home_filled
+            ),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search
+            ),
+            label: "Search",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.ondemand_video_rounded
+            ),
+            label: "Reels",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_bag_rounded
+            ),
+            label: "Shop",
+          ),
+          BottomNavigationBarItem(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(
+                ConstantesImagens.perfil,
+              ),
+              radius: 15,
+            ),
+            label: "Perfil",
+          ),
+        ]
       ),
 
     );
