@@ -1,5 +1,5 @@
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/card_story.dart';
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/story_type.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/card_story.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_type.dart';
 import 'package:flutter/material.dart';
 
 class StoryWidget extends StatelessWidget {

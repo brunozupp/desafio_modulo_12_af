@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/story_type.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_type.dart';
 
 class CardBackground extends StatelessWidget {
 

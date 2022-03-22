@@ -1,10 +1,9 @@
-import 'package:desafio_modulo_12_af/pages/home/widgets/feed/body_card.dart';
-import 'package:desafio_modulo_12_af/pages/home/widgets/feed/header_card.dart';
-import 'package:desafio_modulo_12_af/shared/constantes/constantes_imagens.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/body_card.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/header_card.dart';
 import 'package:flutter/material.dart';
 
-class CardFeed extends StatelessWidget {
-  const CardFeed({ Key? key }) : super(key: key);
+class CardPub extends StatelessWidget {
+  const CardPub({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

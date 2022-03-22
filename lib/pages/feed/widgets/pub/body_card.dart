@@ -64,11 +64,11 @@ class BodyCard extends StatelessWidget {
                 ],
               ),
             
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               
-              Text(
+              const Text(
                 "1.463 curtidas",
                 style: TextStyle(
                   color: Colors.white,
@@ -76,9 +76,43 @@ class BodyCard extends StatelessWidget {
                 ),
               ),
 
+              const SizedBox(
+                height: 10,
+              ),
+
+              const Text.rich(
+                TextSpan(
+                  text: "Bruno Noveli ",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: "É com grande prazer que anuncio o novo app que lançarei na próxima semana com o intuito de proteger o meio ambiente e todos os animais que nele vive",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ]
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              
               Text(
-                "Bruno Noveli "
-              )
+                "Ver todos os 73 comentários",
+                style: TextStyle(
+                  color: Colors.grey.shade600,
+                  fontSize: 14,
+                ),
+              ),
+
             ],
           ),
         ),

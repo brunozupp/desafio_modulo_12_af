@@ -1,9 +1,9 @@
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/card_background.dart';
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/identifier_story_type.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/card_background.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/identifier_story_type.dart';
 import 'package:desafio_modulo_12_af/shared/constantes/constantes_imagens.dart';
 import 'package:flutter/material.dart';
 
-import 'package:desafio_modulo_12_af/pages/home/widgets/story/story_type.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_type.dart';
 
 class CardStory extends StatelessWidget {
 

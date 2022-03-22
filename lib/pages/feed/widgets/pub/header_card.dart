@@ -27,7 +27,7 @@ class HeaderCard extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 12,
+              fontSize: 14,
             ),
           ),
         ),
