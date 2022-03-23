@@ -23,21 +23,25 @@ class FeedPage extends StatelessWidget {
         heightLogo: 70
       ),
       body: ListViewSpecial(
-        itemCount: 1000,
+        itemCount: 10,
+        itemBuilder: (context,index) {
+          print(index);
+          return const CardPub();
+        },
         topItens: const [
-          Text(
-            "AQUI 1",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
+          // Text(
+          //   "AQUI 1",
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //   ),
+          // ),
           StoryWidget(),
-          Text(
-            "AQUI 2",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
+          // Text(
+          //   "AQUI 2",
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //   ),
+          // ),
         ],
         bottomItens: const [
           StoryWidget(),
@@ -55,10 +59,6 @@ class FeedPage extends StatelessWidget {
             ),
           ),
         ],
-        itemBuilder: (context,index) {
-          print(index);
-          return const CardPub();
-        },
       ),
 
       // body: SingleChildScrollView(

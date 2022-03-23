@@ -43,8 +43,8 @@ class ListViewSpecial extends StatelessWidget {
           i = (_bottomItensLength - 1) - i;
           return bottomItens![(i)];
         }
-
-        return itemBuilder(context,index);
+        
+        return itemBuilder(context,(index - _topItensLength)); // MUDAR AQUI
       },
     );
   }
