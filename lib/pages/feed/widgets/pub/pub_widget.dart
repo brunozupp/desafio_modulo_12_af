@@ -9,7 +9,7 @@ class PubWidget extends StatelessWidget {
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: 1,
+      itemCount: 1000,
       itemBuilder: (context,index) {
         print(index);
         return const CardPub();

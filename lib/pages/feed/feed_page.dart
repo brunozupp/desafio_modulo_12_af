@@ -1,5 +1,6 @@
 import 'package:desafio_modulo_12_af/pages/feed/widgets/app_bar_widget.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/card_pub.dart';
+import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/pub_widget.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_widget.dart';
 import 'package:desafio_modulo_12_af/shared/widgets/list_view_special.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,8 @@ class FeedPage extends StatelessWidget {
         heightLogo: 70
       ),
       body: ListViewSpecial(
-        itemCount: 2,
-        topItens: [
+        itemCount: 1000,
+        topItens: const [
           Text(
             "AQUI 1",
             style: TextStyle(
@@ -38,7 +39,7 @@ class FeedPage extends StatelessWidget {
             ),
           ),
         ],
-        bottomItens: [
+        bottomItens: const [
           StoryWidget(),
           Text(
             "AQUI 3",
@@ -59,6 +60,7 @@ class FeedPage extends StatelessWidget {
           return const CardPub();
         },
       ),
+
       // body: SingleChildScrollView(
       //   child: Column(
       //     children: const [
