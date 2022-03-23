@@ -1,6 +1,5 @@
 import 'package:desafio_modulo_12_af/pages/feed/widgets/app_bar_widget.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/card_pub.dart';
-import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/pub_widget.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_widget.dart';
 import 'package:desafio_modulo_12_af/shared/widgets/list_view_special.dart';
 import 'package:flutter/material.dart';
@@ -23,15 +22,37 @@ class FeedPage extends StatelessWidget {
         heightLogo: 70
       ),
       body: ListViewSpecial(
-        itemCount: 3,
+        itemCount: 2,
         topItens: [
+          Text(
+            "AQUI 1",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           StoryWidget(),
-          StoryWidget(),
+          Text(
+            "AQUI 2",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
         ],
         bottomItens: [
           StoryWidget(),
+          Text(
+            "AQUI 3",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           StoryWidget(),
-          Text("dsdsadasd")
+          Text(
+            "AQUI 4",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
         ],
         itemBuilder: (context,index) {
           print(index);

@@ -36,8 +36,12 @@ class ListViewSpecial extends StatelessWidget {
           return topItens![index];
         }
 
-        if(_bottomItensLength > 0 && (_totalItens - _topItensLength) <= index) {
-          return bottomItens![(_totalItens - (index + _bottomItensLength))];
+        if(_bottomItensLength > 0 && (_totalItens - _bottomItensLength) <= (index)) {
+          var i = _totalItens - (index + 1);
+
+          // Invertendo o valor do i para pegar as posições na ordem crescente
+          i = (_bottomItensLength - 1) - i;
+          return bottomItens![(i)];
         }
 
         return itemBuilder(context,index);
