@@ -4,4 +4,5 @@ enum StoryType {
   live,
   specialEvent,
   watched,
+  userWithoutStories
 }

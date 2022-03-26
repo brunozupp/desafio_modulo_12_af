@@ -52,6 +52,12 @@ List<Color> _getLinearColorByStoryType(storyType) {
         Colors.blue.shade400
       ];
 
+    case StoryType.userWithoutStories:
+      return [
+        Colors.white,
+        Colors.white
+      ];
+
     default:
       return [
         Colors.grey,

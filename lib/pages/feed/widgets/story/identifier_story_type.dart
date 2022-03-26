@@ -21,6 +21,9 @@ class IdentifierStoryType extends StatelessWidget {
 
       case StoryType.specialEvent:
         return const _IdentifierSpecialEvent();
+
+      case StoryType.userWithoutStories:
+        return const _IdentifierUserWithoutStories();
       
       default:
         return Container();
@@ -92,6 +95,46 @@ class _IdentifierLive extends StatelessWidget {
             ),
           ),
         ),
+      )
+    );
+  }
+}
+
+class _IdentifierUserWithoutStories extends StatelessWidget {
+  const _IdentifierUserWithoutStories({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: -1,
+      right: 0,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: 30,
+            width: 30,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle
+            ),
+          ),
+          Card(
+            elevation: 4,
+            color: Colors.blue.shade900,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(5),
+              child: Icon(
+                Icons.add,
+                size: 14,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       )
     );
   }

@@ -1,5 +1,6 @@
 import 'package:desafio_modulo_12_af/pages/feed/widgets/story/card_story.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_type.dart';
+import 'package:desafio_modulo_12_af/shared/widgets/list_view_special.dart';
 import 'package:flutter/material.dart';
 
 class StoryWidget extends StatelessWidget {
@@ -7,41 +8,56 @@ class StoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 120,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CardStory(
-                storyType: _teste(index),
-              ),
-
-              const SizedBox(
-                height: 5,
-              ),
-
-              ConstrainedBox(
-                constraints: const BoxConstraints(
-                  maxWidth: 89
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 10,
+      ),
+      child: SizedBox(
+        height: 105,
+        child: ListViewSpecial(
+          scrollDirection: Axis.horizontal,
+          topItens: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                CardStory(
+                  storyType: StoryType.userWithoutStories,
                 ),
-                child: const Text(
-                  "Bruno Noveli",
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12
+              ],
+            ),
+          ],
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                CardStory(
+                  storyType: _teste(index),
+                ),
+
+                const SizedBox(
+                  height: 5,
+                ),
+
+                ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    maxWidth: 89
+                  ),
+                  child: const Text(
+                    "Bruno Noveli",
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12
+                    ),
                   ),
                 ),
-              ),
-            ],
-          );
-        },
+              ],
+            );
+          },
+        ),
       ),
     );
   }
