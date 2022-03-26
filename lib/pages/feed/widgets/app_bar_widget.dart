@@ -3,17 +3,14 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends AppBar {
 
-  final Color background;
   final double widthLogo;
   final double heightLogo;
   
   AppBarWidget({Key? key, 
-    required this.background,
     required this.widthLogo,
     required this.heightLogo,
   }) : super(
     key: key, 
-    backgroundColor: background,
     elevation: 0,
     title: ColorFiltered(
       child: Image.asset(

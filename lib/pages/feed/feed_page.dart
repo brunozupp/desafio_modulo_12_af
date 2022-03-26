@@ -9,17 +9,13 @@ import 'package:flutter/material.dart';
 class FeedPage extends StatelessWidget {
   const FeedPage({ Key? key }) : super(key: key);
 
-  final backgroundColor = Colors.black;
-
   @override
   Widget build(BuildContext context) {
     
     final size = MediaQuery.of(context).size;
     
     return Scaffold(
-      backgroundColor: backgroundColor,
       appBar: AppBarWidget(
-        background: backgroundColor, 
         widthLogo: size.width * 0.35, 
         heightLogo: 70
       ),

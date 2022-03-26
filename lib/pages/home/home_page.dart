@@ -37,7 +37,6 @@ class _HomePageState extends State<HomePage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
         currentIndex: currentPage,
         onTap: (page) {
           setState(() {
@@ -45,12 +44,9 @@ class _HomePageState extends State<HomePage> {
           });
         },
         showSelectedLabels: false,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
         iconSize: 30,
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.black,
             icon: Icon(
               Icons.home_filled
             ),

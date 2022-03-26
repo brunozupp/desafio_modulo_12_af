@@ -1,4 +1,5 @@
 import 'package:desafio_modulo_12_af/pages/home/home_page.dart';
+import 'package:desafio_modulo_12_af/shared/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: AppColors.backgroundColor,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppColors.backgroundColor,
+          elevation: 0,
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: AppColors.backgroundColor,
+          elevation: 0,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
