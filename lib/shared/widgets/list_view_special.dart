@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 
 class ListViewSpecial extends StatelessWidget {
 
-  final List<Widget>? topItens;
-  final List<Widget>? bottomItens;
+  final List<Widget>? starterItems;
+  final List<Widget>? finalItems;
   final int itemCount;
   final Widget Function(BuildContext, int) itemBuilder;
   final Axis scrollDirection;
 
-  final int _topItensLength;
-  final int _bottomItensLength;
+  final int _starterItemsLength;
+  final int _finalItemsLength;
   final int _totalItens;
 
   const ListViewSpecial({
     Key? key,
-    this.topItens,
-    this.bottomItens,
+    this.starterItems,
+    this.finalItems,
     required this.itemCount,
     required this.itemBuilder,
     this.scrollDirection = Axis.vertical,
   }) :
-  _topItensLength = topItens?.length ?? 0,
-  _bottomItensLength = bottomItens?.length ?? 0,
-  _totalItens = (topItens?.length ?? 0) + (bottomItens?.length ?? 0) + itemCount,
+  _starterItemsLength = starterItems?.length ?? 0,
+  _finalItemsLength = finalItems?.length ?? 0,
+  _totalItens = (starterItems?.length ?? 0) + (finalItems?.length ?? 0) + itemCount,
   super(key: key);
 
   @override
@@ -32,19 +32,19 @@ class ListViewSpecial extends StatelessWidget {
       itemCount: _totalItens,
       itemBuilder: (context, index) {
 
-        if(_topItensLength > 0 && index < topItens!.length) {
-          return topItens![index];
+        if(_starterItemsLength > 0 && index < starterItems!.length) {
+          return starterItems![index];
         }
 
-        if(_bottomItensLength > 0 && (_totalItens - _bottomItensLength) <= (index)) {
+        if(_finalItemsLength > 0 && (_totalItens - _finalItemsLength) <= (index)) {
           var i = _totalItens - (index + 1);
 
           // Invertendo o valor do i para pegar as posições na ordem crescente
-          i = (_bottomItensLength - 1) - i;
-          return bottomItens![(i)];
+          i = (_finalItemsLength - 1) - i;
+          return finalItems![(i)];
         }
         
-        return itemBuilder(context,(index - _topItensLength)); // MUDAR AQUI
+        return itemBuilder(context,(index - _starterItemsLength)); // MUDAR AQUI
       },
     );
   }

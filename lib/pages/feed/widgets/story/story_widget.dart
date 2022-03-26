@@ -16,7 +16,7 @@ class StoryWidget extends StatelessWidget {
         height: 105,
         child: ListViewSpecial(
           scrollDirection: Axis.horizontal,
-          topItens: [
+          starterItems: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [

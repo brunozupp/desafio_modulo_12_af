@@ -31,10 +31,10 @@ class FeedPage extends StatelessWidget {
             index: index,
           );
         },
-        topItens: const [
+        starterItems: const [
           StoryWidget(),
         ],
-        bottomItens: const [
+        finalItems: const [
           Padding(
             padding: EdgeInsets.symmetric(
               vertical: 20.0
