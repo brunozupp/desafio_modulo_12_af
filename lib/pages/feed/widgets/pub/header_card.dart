@@ -7,15 +7,15 @@ class HeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
-        CircleAvatar(
+      children: [
+        const CircleAvatar(
           backgroundImage: NetworkImage(
             ConstantesImagens.perfil,
           ),
           radius: 20,
         ),
 
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
 
@@ -24,15 +24,13 @@ class HeaderCard extends StatelessWidget {
             "Bruno Noveli",
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: Colors.white,
+            style: Theme.of(context).textTheme.bodyText1?.copyWith(
               fontWeight: FontWeight.bold,
-              fontSize: 14,
             ),
           ),
         ),
 
-        Icon(
+        const Icon(
           Icons.add,
           color: Colors.white,
         )

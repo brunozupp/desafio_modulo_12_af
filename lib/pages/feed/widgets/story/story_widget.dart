@@ -43,15 +43,12 @@ class StoryWidget extends StatelessWidget {
                   constraints: const BoxConstraints(
                     maxWidth: 89
                   ),
-                  child: const Text(
+                  child: Text(
                     "Bruno Noveli",
                     textAlign: TextAlign.center,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12
-                    ),
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ),
               ],

@@ -77,27 +77,22 @@ class BodyCard extends StatelessWidget {
                     height: 10,
                   ),
                   
-                  const Text(
+                  Text(
                     "1.463 curtidas",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
 
                   const SizedBox(
                     height: 10,
                   ),
 
-                  const Text.rich(
+                  Text.rich(
                     TextSpan(
                       text: "Bruno Noveli ",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
+                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
-                      children: <TextSpan>[
+                      children: const <TextSpan>[
                         TextSpan(
                           text: "É com grande prazer que anuncio o novo app que lançarei na próxima semana com o intuito de proteger o meio ambiente e todos os animais que nele vive",
                           style: TextStyle(
@@ -116,10 +111,7 @@ class BodyCard extends StatelessWidget {
                   
                   Text(
                     "Ver todos os 73 comentários",
-                    style: TextStyle(
-                      color: Colors.grey.shade600,
-                      fontSize: 14,
-                    ),
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
 
                 ],

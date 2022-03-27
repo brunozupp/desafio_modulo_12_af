@@ -29,6 +29,21 @@ class MyApp extends StatelessWidget {
           showSelectedLabels: false,
           showUnselectedLabels: false,
         ),
+        textTheme: TextTheme(
+          bodyText1: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontWeight: FontWeight.normal,
+          ),
+          bodyText2: const TextStyle(
+            color: Colors.white,
+            fontSize: 12,
+          ),
+          subtitle1: TextStyle(
+            color: Colors.grey.shade600,
+            fontSize: 14,
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
