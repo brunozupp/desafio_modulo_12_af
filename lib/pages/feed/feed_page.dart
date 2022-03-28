@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:desafio_modulo_12_af/main.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/app_bar_widget.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/pub/card_pub.dart';
 import 'package:desafio_modulo_12_af/pages/feed/widgets/story/story_widget.dart';
@@ -17,7 +18,10 @@ class FeedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBarWidget(
         widthLogo: size.width * 0.35, 
-        heightLogo: 70
+        heightLogo: 70,
+        mudarTema: () {
+          themeStore.toggleTheme();
+        },
       ),
       body: ListViewSpecial(
         itemCount: 3,
