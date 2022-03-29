@@ -7,15 +7,15 @@ class AppTheme {
   AppTheme._();
 
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.backgroundColor,
+    scaffoldBackgroundColor: AppColors.backgroundColorLight,
     appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.backgroundColorLight,
       centerTitle: true,
       elevation: 0,
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.backgroundColorLight,
       elevation: 0,
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.grey,
@@ -23,36 +23,30 @@ class AppTheme {
       showUnselectedLabels: false,
     ),
     textTheme: TextTheme(
-      bodyText1: const TextStyle(
-        color: Colors.white,
-        fontSize: 14,
-        fontWeight: FontWeight.normal,
-      ),
-      bodyText2: const TextStyle(
-        color: Colors.white,
-        fontSize: 12,
-      ),
-      subtitle1: TextStyle(
-        color: Colors.grey.shade600,
-        fontSize: 14,
+      bodyText1: AppTextStyles.descriptionLight,
+      bodyText2: AppTextStyles.smallDescriptionLight,
+      subtitle1: AppTextStyles.descriptionLight.copyWith(
+        color: Colors.grey.shade600
       ),
     ),
   );
 
   static final darkTheme = lightTheme.copyWith(
-    scaffoldBackgroundColor: Colors.red,
+    scaffoldBackgroundColor: AppColors.backgroundColorDark,
     appBarTheme: lightTheme.appBarTheme.copyWith(
-      elevation: 3
+      elevation: 3,
+      backgroundColor: AppColors.backgroundColorDark,
+    ),
+    bottomNavigationBarTheme: lightTheme.bottomNavigationBarTheme.copyWith(
+      backgroundColor: AppColors.backgroundColorDark,
+      selectedItemColor: Colors.purple,
+      unselectedItemColor: Colors.grey,
     ),
     textTheme: TextTheme(
-      bodyText1: AppTextStyles.simpleText,
-      bodyText2: const TextStyle(
-        color: Colors.white,
-        fontSize: 12,
-      ),
-      subtitle1: TextStyle(
-        color: Colors.grey.shade600,
-        fontSize: 14,
+      bodyText1: AppTextStyles.descriptionDark,
+      bodyText2: AppTextStyles.smallDescriptionDark,
+      subtitle1: AppTextStyles.descriptionDark.copyWith(
+        color: Colors.blue.shade600
       ),
     ),
   );
