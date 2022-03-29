@@ -1,20 +1,22 @@
+import 'package:desafio_modulo_12_af/shared/styles/colors_theme_mode.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
 
   AppColors._();
 
-  // Light Mode
-  static const backgroundColorLight = Colors.black;
+  static const backgroundColor = ColorsThemeMode(
+    lightColor: Colors.black,
+    darkColor: Colors.red,
+  );
 
-  static const textColorLight = Colors.white;
+  static const textColor = ColorsThemeMode(
+    lightColor: Colors.white,
+    darkColor: Colors.green,
+  );
 
-  static const primaryColorLight = Colors.white;
-
-  // Dark Mode
-  static const backgroundColorDark = Colors.red;
-
-  static const textColorDark = Colors.green;
-
-  static const primaryColorDark = Colors.green;
+  static const primaryColor = ColorsThemeMode(
+    lightColor: Colors.white,
+    darkColor: Colors.green,
+  );
 }

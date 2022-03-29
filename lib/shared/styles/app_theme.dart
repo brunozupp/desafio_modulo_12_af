@@ -7,15 +7,15 @@ class AppTheme {
   AppTheme._();
 
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.backgroundColorLight,
-    appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.backgroundColorLight,
+    scaffoldBackgroundColor: AppColors.backgroundColor.lightColor,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.backgroundColor.lightColor,
       centerTitle: true,
       elevation: 0,
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: AppColors.backgroundColorLight,
+      backgroundColor: AppColors.backgroundColor.lightColor,
       elevation: 0,
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.grey,
@@ -23,29 +23,29 @@ class AppTheme {
       showUnselectedLabels: false,
     ),
     textTheme: TextTheme(
-      bodyText1: AppTextStyles.descriptionLight,
-      bodyText2: AppTextStyles.smallDescriptionLight,
-      subtitle1: AppTextStyles.descriptionLight.copyWith(
+      bodyText1: AppTextStyles.description.lightTextStyle,
+      bodyText2: AppTextStyles.smallDescription.lightTextStyle,
+      subtitle1: AppTextStyles.description.lightTextStyle.copyWith(
         color: Colors.grey.shade600
       ),
     ),
   );
 
   static final darkTheme = lightTheme.copyWith(
-    scaffoldBackgroundColor: AppColors.backgroundColorDark,
+    scaffoldBackgroundColor: AppColors.backgroundColor.darkColor,
     appBarTheme: lightTheme.appBarTheme.copyWith(
       elevation: 3,
-      backgroundColor: AppColors.backgroundColorDark,
+      backgroundColor: AppColors.backgroundColor.darkColor,
     ),
     bottomNavigationBarTheme: lightTheme.bottomNavigationBarTheme.copyWith(
-      backgroundColor: AppColors.backgroundColorDark,
+      backgroundColor: AppColors.backgroundColor.darkColor,
       selectedItemColor: Colors.purple,
       unselectedItemColor: Colors.grey,
     ),
     textTheme: TextTheme(
-      bodyText1: AppTextStyles.descriptionDark,
-      bodyText2: AppTextStyles.smallDescriptionDark,
-      subtitle1: AppTextStyles.descriptionDark.copyWith(
+      bodyText1: AppTextStyles.description.darkTextStyle,
+      bodyText2: AppTextStyles.smallDescription.darkTextStyle,
+      subtitle1: AppTextStyles.description.darkTextStyle.copyWith(
         color: Colors.blue.shade600
       ),
     ),
