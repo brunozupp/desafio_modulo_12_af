@@ -1,4 +1,5 @@
 import 'package:desafio_modulo_12_af/pages/feed/feed_page.dart';
+import 'package:desafio_modulo_12_af/pages/search/search_view.dart';
 import 'package:desafio_modulo_12_af/shared/constantes/constantes_imagens.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   final pages = [
     const FeedPage(),
-    Container(
-      color: Colors.red,
-    ),
+    const SearchView(),
     Container(
       color: Colors.blue,
     ),

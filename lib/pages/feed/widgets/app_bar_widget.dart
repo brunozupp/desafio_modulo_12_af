@@ -14,45 +14,43 @@ class AppBarWidget extends AppBar {
     required this.heightLogo,
     required this.mudarTema,
   }) : super(
-      key: key, 
-      elevation: 0,
-      title: ColorFiltered(
-        child: Image.asset(
-          ConstantesImagens.instagramLogo,
-          width: widthLogo,
-          height: heightLogo,
-        ),
-        colorFilter: const ColorFilter.mode(
-        Colors.white, 
-          BlendMode.srcATop
+    key: key, 
+    elevation: 0,
+    title: ColorFiltered(
+      child: Image.asset(
+        ConstantesImagens.instagramLogo,
+        width: widthLogo,
+        height: heightLogo,
+      ),
+      colorFilter: const ColorFilter.mode(
+      Colors.white, 
+        BlendMode.srcATop
+      ),
+    ),
+    actions: [
+      IconButton(
+        onPressed: mudarTema, 
+        icon: const Icon(
+          Icons.add_box_outlined,
+          size: 30,
         ),
       ),
-      actions: [
-        IconButton(
-          onPressed: mudarTema, 
-          icon: const Icon(
-            Icons.add_box_outlined,
-            size: 30,
-          ),
-        ),
-  
-        IconButton(
-          onPressed: () {}, 
-          icon: const Icon(
-            Icons.favorite_border,
-            size: 30,
-          ),
-        ),
-  
-        IconButton(
-          onPressed: () {}, 
-          icon: const Icon(
-            Icons.chat_bubble_outline_outlined,
-            size: 30,
-          ),
-        ),
-      ],  
-    );
 
+      IconButton(
+        onPressed: () {}, 
+        icon: const Icon(
+          Icons.favorite_border,
+          size: 30,
+        ),
+      ),
 
+      IconButton(
+        onPressed: () {}, 
+        icon: const Icon(
+          Icons.chat_bubble_outline_outlined,
+          size: 30,
+        ),
+      ),
+    ],  
+  );
 }
